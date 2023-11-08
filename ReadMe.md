@@ -14,8 +14,14 @@ K6 is an open-source performance testing tool used for load testing and performa
 
 ## K6 Script Blocks:
 The three main blocks that a k6 script has are:
+
+
 `export function setup() {}`
+
+
 `export default function (data) {}`
+
+
 `export function teardown(data) {}`
 
 ## Executing a K6 script
