@@ -7,7 +7,9 @@ K6 is an open-source performance testing tool used for load testing and performa
 ## Setting up K6
 
 1. If you use the Chocolatey package manager you can install the unofficial k6 package with: `choco install k6`
+
    or
-1. If you use the Windows Package Manager, install the official packages from the k6 with: `winget install k6 --source winget`
+
+2. If you use the Windows Package Manager, install the official packages from the k6 with: `winget install k6 --source winget`
 
 ## Executing a K6 script
