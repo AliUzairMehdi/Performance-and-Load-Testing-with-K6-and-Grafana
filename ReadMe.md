@@ -1,5 +1,24 @@
 # Performance-and-Load-Testing-with-K6-and-Grafana
 
+## Repository
+
+This repository is all about Performance, Load testing the User Apis from Swagger and Bookings Api from Restful-Booker and it contains testing a postgres db.
+
+### Database Testing
+
+For testing the PostgreSQL Database, follow the steps:
+
+1. Install pgAdmin from: https://www.enterprisedb.com/downloads/postgres-postgresql-downloads.
+2. Configure your server for `localhost` with default `port:5432`, you can change the port.
+3. Create a database named as `your_database`, in this case it's `library`.
+4. Perform the following query on your database:
+
+`CREATE TABLE books (book_id serial PRIMARY KEY,title text,author text,publication_year integer);` : to create a table named books.
+
+Make sure to place `books.csv` in a folder where PostgreSQL can easily access it. Now you can copy that csv data into the table by the query:
+
+`COPY books (title, author, publication_year) FROM 'your_postgres_path/books.csv' DELIMITER ',' CSV HEADER`
+
 ## K6
 
 K6 is an open-source performance testing tool used for load testing and performance testing of web applications, APIs and can be utilized for testing the performance of Databases as well. It's designed to be user-friendly and scriptable, making it a popular choice for developers and DevOps teams to ensure the reliability and scalability of their applications.
