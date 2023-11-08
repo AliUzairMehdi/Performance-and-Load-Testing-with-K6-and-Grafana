@@ -24,6 +24,16 @@ The three main blocks that a k6 script has are:
 
 ## Executing a K6 script
 
-For executing the script you can use the following command:
+### Without node libraries
+For executing the script which contains no node libraries you can use the following command:
 
 `k6 run <your_scriptname>.js`. For example: `k6 run k6.js`
+
+
+### With node libraries
+If your script uses any node modules/libraries like in case of testing a database, you will need an external k6 extension
+
+#### K6 Extensions
+Since K6 is written in Go so it has no support for external node libraries. For that you need to go throught the following steps:
+
+1. Install Go globally on your local machine. For Go installation, please visit: https://go.dev/doc/install
